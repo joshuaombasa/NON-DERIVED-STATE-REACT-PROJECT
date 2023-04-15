@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Box(props) {
-
+    console.log(props.handleClick)
     const [status, setStatus] = React.useState(props.on)
 
         //  function handleClick() {
@@ -15,6 +15,8 @@ export default function Box(props) {
     
 
     return (
-        <div style={styles} className="box" onClick={handleClick}></div>
+        <div style={styles} className="box" onClick={() => {
+            props.handleClick.toggle(props.id)
+        }}></div>
     )
 }
