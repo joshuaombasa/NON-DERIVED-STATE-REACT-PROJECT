@@ -9,11 +9,16 @@ function App() {
   
   const [squares, setSquares] = React.useState(boxes)
 
+  function toggle(id) {
+    console.log(id)
+  }
+
   const squaresHtml = squares.map((square) => {
     return <Box 
     on={square.on}
     key={square.id}
     id={square.id}
+    handleClick={toggle}
     />
   })
 
