@@ -23,8 +23,7 @@ function App() {
     return <Box 
     on={square.on}
     key={square.id}
-    id={square.id}
-    handleClick={toggle}
+    toggle={() => {toggle(square.id)}}
     />
   })
 
