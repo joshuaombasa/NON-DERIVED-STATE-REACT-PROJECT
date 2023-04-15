@@ -9,8 +9,14 @@ function App() {
   
   const [squares, setSquares] = React.useState(boxes)
 
+
+
   function toggle(id) {
-    console.log(id)
+    setSquares((prevSquares)  => {
+      return [...prevSquares].map((square) => {
+        return square.id === id ? {...square, on: !square.on} : square 
+      })
+    })
   }
 
   const squaresHtml = squares.map((square) => {
