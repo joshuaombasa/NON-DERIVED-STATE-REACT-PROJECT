@@ -10,7 +10,11 @@ function App() {
   const [squares, setSquares] = React.useState(boxes)
 
   const squaresHtml = squares.map((square) => {
-    return <Box />
+    return <Box 
+    on={square.on}
+    key={square.id}
+    id={square.id}
+    />
   })
 
   return (
